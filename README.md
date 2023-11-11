@@ -11,8 +11,8 @@ To get started with the 3D Shoe Customizer, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/3d-shoe-customizer.git
-   cd 3d-shoe-customizer
+   git clone https://github.com/adnanvw/3D-Shoe-Customizer.git
+   cd 3D-Shoe-Customizer
    ```
 
 2. **Install Dependencies:**
