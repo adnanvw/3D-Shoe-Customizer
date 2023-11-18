@@ -6,16 +6,22 @@ import ShoeModel from './Components/ShoeModel'
 import { useSnapshot } from 'valtio'
 import state from './store'
 import "./App.css"
+import StarsComp from './Components/StarsComp'
 
 const App = () => {
 
   const snap = useSnapshot(state)
 
-  const handleSelectChange = (e)=>{
-    state.current=e.target.value 
+  const handleSelectChange = (e) => {
+    state.current = e.target.value
   }
 
   return (
+    <>
+      <Canvas style={{ background: 'linear-gradient(to bottom, #e1e1e1 -15%, black 40%)', position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
+        {/* Other 3D elements */}
+        <StarsComp />
+      </Canvas>
     <div id="canvas-container">
       <div >
         <div id="customization-section">
@@ -30,7 +36,7 @@ const App = () => {
               ))}
             </select>
           </label>
-          <ColorPickers/>
+          <ColorPickers />
         </div>
       </div>
       <div id="canvas-container">
@@ -47,6 +53,7 @@ const App = () => {
 
 
     </div>
+    </>
 
   )
 }
